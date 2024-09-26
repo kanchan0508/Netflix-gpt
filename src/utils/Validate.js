@@ -1,3 +1,4 @@
+
 export const checkValidateData = (email, password, name) => {
     const isNameValidate = /^[a-zA-Z][a-zA-Z\s'-]{1,49}$/.test(name);
     const isEmailValidate = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email); // Move $ outside of the regex
@@ -9,3 +10,5 @@ export const checkValidateData = (email, password, name) => {
 
     return null;
 };
+
+

@@ -1,25 +1,69 @@
 import React, { useRef, useState } from "react";
 import Header from "./Header";
 import { checkValidateData } from "../utils/Validate";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../utils/firebase";
 
 const Login = () => {
   const [signInForm, setSignInForm] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
 
-  const email = useRef(null)
-  const password = useRef(null)
-  const name = useRef(null)
-  
+  const email = useRef(null);
+  const password = useRef(null);
+  const name = useRef(null);
 
   const toggleSignInForm = () => {
     setSignInForm(!signInForm);
   };
 
   const handleButtonClick = () => {
-        const message = checkValidateData(email.current.value, password.current.value, name.current.value)
-        console.log(email.current.value, password.current.value)
-        setErrorMessage(message)
-        }
+    const message = checkValidateData(
+      email.current.value,
+      password.current.value,
+   
+    );
+    setErrorMessage(message);
+
+    if (message) return;
+
+    //sign up and sign in
+    if (!signInForm) {
+      // sign up logic
+      createUserWithEmailAndPassword(
+        auth,
+        email.current.value,
+        password.current.value
+      )
+        .then((userCredential) => {
+          // Signed up
+          const user = userCredential.user;
+          console.log(user);
+
+          // ...
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          setErrorMessage(errorCode + "- " + errorMessage);
+          // ..
+        });
+    } else {
+      // sign in logic
+      signInWithEmailAndPassword(auth, email.current.value, password.current.value)
+        .then((userCredential) => {
+          // Signed in
+          const user = userCredential.user;
+          console.log(user + " signed in " )
+          // ...
+        }) 
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          setErrorMessage(errorCode + "- " + errorMessage); 
+        });
+      console.log("Sign up logic");
+    }
+  };
   return (
     <div className="relative">
       <Header />
@@ -29,32 +73,38 @@ const Login = () => {
           alt=""
         />
       </div>
-      <form onSubmit={(e) => e.preventDefault()} className="w-3/12 absolute p-12 bg-black mx-auto mt-40 right-0 left-0 text-white bg-opacity-80 rounded">
+      <form
+        onSubmit={(e) => e.preventDefault()}
+        className="w-3/12 absolute p-12 bg-black mx-auto mt-40 right-0 left-0 text-white bg-opacity-80 rounded"
+      >
         <h1 className="py-4 text-3xl font-bold ">
           {signInForm ? "Sign In" : "Sign Up"}
         </h1>
         {!signInForm && (
           <input
-          ref={name}
+            ref={name}
             className="p-4 w-full bg-gray-800 mb-5 bg-opacity-65"
             type="text"
             placeholder="First Name"
           />
         )}
         <input
-        ref={email}
+          ref={email}
           className="p-4 w-full bg-gray-800 mb-5 bg-opacity-65"
           type="text"
           placeholder="Email Address"
         />
         <input
-        ref={password}
+          ref={password}
           className="p-4 w-full bg-gray-800 mb-5 bg-opacity-65"
           type="text"
           placeholder="password"
         />
         <p className="text-red-500 font-bold py-2">{errorMessage}</p>
-        <button onClick={() => handleButtonClick()} className="w-full p-3 bg-red-600 rounded">
+        <button
+          onClick={() => handleButtonClick()}
+          className="w-full p-3 bg-red-600 rounded"
+        >
           {signInForm ? "Sign In" : "Sign up"}
         </button>
         <p onClick={() => toggleSignInForm()} className="cursor-pointer mt-3">
