@@ -14,6 +14,10 @@
 - Implementing sign in user Api
 - created Redux store with userSlice
 - Implemented sign out
+- Updated Profile
+- bugFix - for sign up user displayName and profile picture
+- Unsubscribe to the onAuthStateChanged callback
+- Add hardcoded values to the constants file
 
 #Features
 -Login/sign up
