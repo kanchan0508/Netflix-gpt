@@ -18,6 +18,15 @@
 - bugFix - for sign up user displayName and profile picture
 - Unsubscribe to the onAuthStateChanged callback
 - Add hardcoded values to the constants file
+- Register TMDB api now playing movie list api
+- Get data from TMDB api 
+- Custom Hook  for now playing movies
+- Create movieSlice
+- Update store with Movie Data
+- Planning for MainContainer and SecondaryContainer
+- Fetch data for trailer videos 
+- Update store with trailer videos
+- Embeded the youtube video and make it auto play
 
 #Features
 -Login/sign up
