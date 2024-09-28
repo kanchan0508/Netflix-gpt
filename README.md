@@ -33,7 +33,10 @@
 - build movie Card
 - TMDB Images Cdn URL
 - UsePopularMovie , useTrendingMovie , useUpcomingMovie   custom hook created
-
+- GPT search page
+- GPT search bar
+- (BONUS) Added Multi language features
+- 
 
 
 #Features

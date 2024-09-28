@@ -6,7 +6,7 @@ import { auth } from "../utils/firebase";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setUser } from "../utils/userSlice";
-import { AVATAR_PHOTO } from "../utils/Constant";
+import { AVATAR_PHOTO, BG_URL } from "../utils/Constant";
 
 const Login = () => {
   const [signInForm, setSignInForm] = useState(true);
@@ -90,7 +90,7 @@ const Login = () => {
       <Header />
       <div className="absolute">
         <img
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/bfc0fc46-24f6-4d70-85b3-7799315c01dd/web/IN-en-20240923-TRIFECTA-perspective_74e21c19-980e-45ef-bd6c-78c1a6ce9381_large.jpg"
+          src={BG_URL}
           alt=""
         />
       </div>
