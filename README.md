@@ -26,7 +26,15 @@
 - Planning for MainContainer and SecondaryContainer
 - Fetch data for trailer videos 
 - Update store with trailer videos
-- Embeded the youtube video and make it auto play
+- Embedded the youtube video and make it auto play
+- Tailwind classes to make Main Container awesome
+- build Secondary Component
+- Build movie List
+- build movie Card
+- TMDB Images Cdn URL
+- UsePopularMovie , useTrendingMovie , useUpcomingMovie   custom hook created
+
+
 
 #Features
 -Login/sign up

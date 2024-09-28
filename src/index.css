@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+.scrollbar-custom {
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #888 transparent; /* For Firefox */
+  }
+  
+  .scrollbar-custom::-webkit-scrollbar {
+    height: 8px; /* Customize the height of the scrollbar */
+  }
+  
+  .scrollbar-custom::-webkit-scrollbar-track {
+    background: transparent; /* Background of the scrollbar track */
+  }
+  
+  .scrollbar-custom::-webkit-scrollbar-thumb {
+    background-color: #888; /* Scrollbar color */
+    border-radius: 10px; /* Scrollbar thumb rounded */
+  }
+  
+  .scrollbar-custom::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Scrollbar color on hover */
+  }
+  

@@ -42,8 +42,8 @@ const Header = () => {
     return () => unSubscribe()
   }, [])
   return (
-    <div className='absolute w-screen  bg-gradient-to-b from-black z-40 flex justify-between'>
-    <img className=' w-48  ml-10 p-2 ' src={LOGO} alt='' />
+    <div className='absolute w-[100%]  bg-gradient-to-b from-black z-40 flex justify-between'>
+    <img className=' w-48 ml-5  p-2 ' src={LOGO} alt='' />
     { user && <div className='flex'>
       <img className='w-10 h-10 mt-5 mr-1' src={AVATAR_PHOTO} alt='profile' />
       <button onClick={()=> handleSignout()} className='font-bold text-white' >(Sign-out)</button>
