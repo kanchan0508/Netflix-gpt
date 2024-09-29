@@ -82,7 +82,7 @@ const Login = () => {
           const errorMessage = error.message;
           setErrorMessage(errorCode + "- " + errorMessage); 
         });
-      console.log("Sign up logic");
+     
     }
   };
   return (
