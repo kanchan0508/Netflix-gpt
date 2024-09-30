@@ -25,4 +25,3 @@ export const SupportedLanguages = [
 ];
 
 
-export const OPENAI_KEY = "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"

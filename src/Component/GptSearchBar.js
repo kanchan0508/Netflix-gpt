@@ -9,9 +9,7 @@ const GptSearchBar = () => {
 
   const handleGptSearchClick = async () => {
     const gptQuery =
-      "Act as a Movie Recommendation system and Suggest some movies for the Query : " +
-      searchtext.current.value +
-      ". Only give the names of 2 movies, comma separated like the example result given ahead . Example result: Gadar, Sholey, Don, Golmal, Koi mil gya";
+      `Act as a Movie Recommendation system and Suggest some movies for the Query : ${searchtext.current.value}. Only give the names of 2 movies, comma separated like the example result given ahead . Example result: Gadar, Sholey, Don, Golmal, Koi mil gya`;
       
     const getResult = await client.chat.completions.create({
       messages: [{ role: "user", content: gptQuery }],
