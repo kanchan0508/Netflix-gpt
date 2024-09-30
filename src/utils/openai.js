@@ -1,10 +1,10 @@
-// import OpenAI from 'openai';
+import OpenAI from 'openai';
 
 
-// const client = new OpenAI({
-//   apiKey: OPENAI_KEY,
-//   dangerouslyAllowBrowser: true,
-// });
+const client = new OpenAI({
+  apiKey: OPENAI_KEY,
+  dangerouslyAllowBrowser: true,
+});
 
 
-// export default client
+export default client
