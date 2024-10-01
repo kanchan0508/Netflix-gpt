@@ -8,6 +8,7 @@ import useTrending from "../hooks/useTrending";
 import useUpcomingMovies from "../hooks/useUpcomingMovies";
 import { useSelector } from "react-redux";
 import GptSearch from "./GptSearch";
+import FaqSection from "./FaqSection";
 
 const Browse = () => {
   const showgptsearch = useSelector((store) => store.gpt.GptSearchResults);
@@ -27,6 +28,7 @@ const Browse = () => {
           <SecondaryContainer />
         </>
       )}
+      <FaqSection />
     </div>
   );
 };

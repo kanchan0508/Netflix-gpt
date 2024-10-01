@@ -23,3 +23,37 @@ export const SupportedLanguages = [
   { identifier: "hindi", language: "Hindi" },
   { identifier: "spanish", language: "Spanish" },
 ];
+export const OPENAI_KEY = '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'
+
+
+
+
+
+
+export const faqData = [
+  {
+    question: "What is Netflix?",
+    answer:
+      "Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.",
+  },
+  {
+    question: "How much does Netflix cost?",
+    answer:
+      "Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from $8.99 to $17.99 a month. No extra costs, no contracts.",
+  },
+  {
+    question: "Where can I watch?",
+    answer:
+      "Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device.",
+  },
+  {
+    question: "How do I cancel?",
+    answer:
+      "Netflix is flexible. There are no pesky contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.",
+  },
+  {
+    question: "What can I watch on Netflix?",
+    answer:
+      "Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more.",
+  },
+];
