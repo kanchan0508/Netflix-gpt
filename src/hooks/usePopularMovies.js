@@ -1,10 +1,12 @@
 import { useEffect } from "react";
 import { options } from "../utils/Constant";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addPopular } from "../utils/movieSlice"; // Corrected the typo
 
 const usePopularMovies = () => {
   const dispatch = useDispatch();
+
+  const  Popular = useSelector((store) => store.movie. Popular);
 
   const getPopular = async () => {
     try {
@@ -24,7 +26,7 @@ const usePopularMovies = () => {
   };
 
   useEffect(() => {
-    getPopular();
+    !Popular && getPopular();
   }, []);
 };
 

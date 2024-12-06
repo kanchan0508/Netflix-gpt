@@ -1,5 +1,5 @@
 import React from "react";
-import { faqData } from "../utils/Constant";
+import { BG_URL, faqData } from "../utils/Constant";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleFaq } from "../utils/FaqSlice";
 
@@ -12,8 +12,8 @@ const FaqSection = () => {
   };
 
   return (
-    <div className="bg-black text-white pl-20 p-5">
-      <div className="w-2/3">
+    <div className="bg-black text-white pl-20 p-5  opacity-95">
+      <div className="w-2/3 pt-10">
         <h2 className="font-bold text-3xl">Frequently Asked Questions</h2>
         {faqData.map((faq, index) => (
           <div key={index} className="mt-4 text-xl cursor-pointer">

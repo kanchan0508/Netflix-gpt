@@ -9,7 +9,7 @@ export const options = {
   headers: {
     accept: "application/json",
     Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjNjA2ODA0NmJkODExZDBjOTNiMTM3MmZhOTA2NGI4NiIsIm5iZiI6MTcyNzQyNDc2My41OTA3MTQsInN1YiI6IjY2YmRiYzdiZmIwOGI4YWI2MjgyODM5MCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.VMduwdAGoOqQkqudDFdkZOIn1vmTa2B94GjpRPrTPTU",
+      "Bearer" + process.env.REACT_APP_TMDB_KEY,
   },
 };
 
@@ -23,12 +23,7 @@ export const SupportedLanguages = [
   { identifier: "hindi", language: "Hindi" },
   { identifier: "spanish", language: "Spanish" },
 ];
-export const OPENAI_KEY = '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'
-
-
-
-
-
+export const OPENAI_KEY = 'sk-hCe_qHbKxNNuu2UYmVSlD9-3CgQr-cidlEsnMrHqqRT3BlbkFJ7D8qWZ5yrs1k3mo6vv3V0b2NR7HO7JbheDH-8VZfoA'
 
 export const faqData = [
   {
